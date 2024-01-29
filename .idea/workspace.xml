@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dbafc505-25b6-4d7c-8c38-573bfe8b2c05" name="Changes" comment="initial commit" />
+    <list default="true" id="dbafc505-25b6-4d7c-8c38-573bfe8b2c05" name="Changes" comment="initial commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CatalogWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/CatalogWindow.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CatalogWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CatalogWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ClientWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientWindow.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ClientWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,6 +41,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW": "true",
     "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "294",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "C:/Users/Kuba/Downloads/mysql-connector-j-8.3.0/mysql-connector-j-8.3.0.jar",
@@ -69,6 +77,8 @@
       <option name="presentableId" value="Default" />
       <updated>1706535682939</updated>
       <workItem from="1706535685538" duration="8663000" />
+      <workItem from="1706563046747" duration="1850000" />
+      <workItem from="1706565307852" duration="2638000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1706543986247</created>
@@ -97,5 +107,15 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
     <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.sql.SQLException" package="java.sql" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

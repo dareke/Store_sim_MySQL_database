@@ -1,4 +1,5 @@
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 import java.sql.*;
 import java.util.Objects;
 
@@ -22,19 +23,6 @@ public class Database {
                 // Wykonujemy zapytanie i otrzymujemy wyniki
                 ResultSet resultSet = statement.executeQuery(sqlQuery);
 
-                // Przetwarzamy wyniki
-                /*while (resultSet.next()) {
-                    int id = resultSet.getInt("id_produktu");
-                    String nazwa = resultSet.getString("nazwa");
-                    String typ = resultSet.getString("typ");
-                    String kolor = resultSet.getString("kolor");
-                    String rozmiar = resultSet.getString("rozmiar");
-                    float cena = resultSet.getFloat("cena");
-
-                    // Wyświetlamy wyniki
-                    System.out.println("ID: " + id + ", Username: " + nazwa + ", Email: " + typ +
-                            ", Age: " + kolor + ", Created At: " + rozmiar + "cena " + cena);
-                }*/
             }
         } catch (SQLException e) {
             System.out.println("Błąd podczas połączenia z bazą danych:");
@@ -43,34 +31,52 @@ public class Database {
     }
 
     public String getLogin(String login, String password) throws SQLException {
-            String sqlQuery = "SELECT * FROM Użytkownicy";
-        try (Statement statement = connection.createStatement()) {
-            // Wykonujemy zapytanie i otrzymujemy wyniki
-            ResultSet resultSet = statement.executeQuery(sqlQuery);
+        String sqlQuery = "SELECT * FROM Użytkownicy WHERE login = ?";
+        try (PreparedStatement statement = connection.prepareStatement(sqlQuery)) {
+            statement.setString(1, login);
+            ResultSet resultSet = statement.executeQuery();
 
-            while (resultSet.next()) {
-                String login_result = resultSet.getString("login");
+            if (resultSet.next()) {
                 String password_result = resultSet.getString("hasło");
-                if (Objects.equals(login, login_result)) {
-                    if(Objects.equals(password, password_result)){
-                        JOptionPane.showMessageDialog(null, "Zostałeś zalogowany!");
-                        return resultSet.getString("typ");
-                    }
-                    else{
-                        JOptionPane.showMessageDialog(null, "Nieprawidłowe hasło!");
-                        return null;
-                    }
-                }
-                else{
-                    JOptionPane.showMessageDialog(null, "Nie znaleziono loginu w bazie!");
+                if (Objects.equals(password, password_result)) {
+                    return resultSet.getString("typ");
+                } else {
+                    JOptionPane.showMessageDialog(null, "Nieprawidłowe hasło!");
                     return null;
                 }
+            } else {
+                JOptionPane.showMessageDialog(null, "Nie znaleziono loginu w bazie!");
+                return null;
             }
-            return null;
-        }catch (SQLException e) {
+        } catch (SQLException e) {
             System.out.println("Błąd podczas połączenia z bazą danych:");
+            e.printStackTrace();
             return null;
         }
+    }
+    public DefaultTableModel getCatalog() {
+        DefaultTableModel model = new DefaultTableModel();
+        String[] columns = {"ID", "Nazwa", "Typ", "Kolor", "Rozmiar", "Cena"};
+        model.setColumnIdentifiers(columns);
+
+        String sqlQuery = "SELECT * FROM Katalog";
+        try (Statement statement = connection.createStatement()) {
+            ResultSet resultSet = statement.executeQuery(sqlQuery);
+            while (resultSet.next()) {
+                Object[] row = new Object[6];
+                row[0] = resultSet.getInt("id_produktu");
+                row[1] = resultSet.getString("nazwa");
+                row[2] = resultSet.getString("typ");
+                row[3] = resultSet.getString("kolor");
+                row[4] = resultSet.getString("rozmiar");
+                row[5] = resultSet.getFloat("cena");
+                model.addRow(row);
+            }
+        } catch (SQLException e) {
+            System.out.println("Błąd podczas połączenia z bazą danych:");
+            e.printStackTrace();
+        }
+        return model;
     }
 
 }
