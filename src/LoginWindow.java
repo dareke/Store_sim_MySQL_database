@@ -22,13 +22,11 @@ public class LoginWindow {
             public void actionPerformed(ActionEvent e) {
                 String login = loginTextField.getText();
                 String password = passwordTextField.getText();
-                System.out.println("Przycisniecie klawisza");
                 try {
                     String type = database.getLogin(login, password);
                     System.out.println(type);
                     if(type != null){
                         if(type.equals("admin")){
-                            System.out.println("admin");
                             AdminWindow adminWindow = new AdminWindow(database);
                         }
                         else if (type.equals("pracownik")) {

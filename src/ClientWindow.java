@@ -24,5 +24,12 @@ public class ClientWindow {
                 frame.dispose();
             }
         });
+        przejrzyjZamowieniaButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ClientOrderWindow clientOrderWindow = new ClientOrderWindow(database);
+                frame.dispose();
+            }
+        });
     }
 }

@@ -5,12 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dbafc505-25b6-4d7c-8c38-573bfe8b2c05" name="Changes" comment="initial commit">
+      <change afterPath="$PROJECT_DIR$/src/ClientOrderWindow.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ClientOrderWindow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/WarehouseOrderWindow.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/WarehouseOrderWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CatalogWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/CatalogWindow.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CatalogWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CatalogWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ClientWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientWindow.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ClientWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EmployeeWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/EmployeeWindow.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EmployeeWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EmployeeWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LoginWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/LoginWindow.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LoginWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LoginWindow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +49,7 @@
     "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW": "true",
     "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "294",
     "WebServerToolWindowFactoryState": "false",
+    "extract.method.default.visibility": "private",
     "last_opened_file_path": "C:/Users/Kuba/Downloads/mysql-connector-j-8.3.0/mysql-connector-j-8.3.0.jar",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -78,7 +84,8 @@
       <updated>1706535682939</updated>
       <workItem from="1706535685538" duration="8663000" />
       <workItem from="1706563046747" duration="1850000" />
-      <workItem from="1706565307852" duration="2638000" />
+      <workItem from="1706565307852" duration="2773000" />
+      <workItem from="1706718774233" duration="3346000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1706543986247</created>
@@ -87,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1706543986247</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="initial commit">
+      <created>1706567981305</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1706567981305</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
