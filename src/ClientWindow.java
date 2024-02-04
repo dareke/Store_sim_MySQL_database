@@ -31,5 +31,12 @@ public class ClientWindow {
                 frame.dispose();
             }
         });
+        zmienDaneButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ChangeClientDataWindow changeClientDataWindow = new ChangeClientDataWindow(database);
+                frame.dispose();
+            }
+        });
     }
 }

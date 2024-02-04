@@ -24,5 +24,19 @@ public class EmployeeWindow {
                 frame.dispose();
             }
         });
+        clientOrderManageButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ClientOrderManageWindow clientOrderManageWindow = new ClientOrderManageWindow(database);
+                frame.dispose();
+            }
+        });
+        warehouseManageButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                WarehouseManageWindow warehouseManageWindow = new WarehouseManageWindow(database);
+                frame.dispose();
+            }
+        });
     }
 }

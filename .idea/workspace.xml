@@ -5,17 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dbafc505-25b6-4d7c-8c38-573bfe8b2c05" name="Changes" comment="initial commit">
-      <change afterPath="$PROJECT_DIR$/src/ClientOrderWindow.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ClientOrderWindow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/WarehouseOrderWindow.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/WarehouseOrderWindow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ChangeClientDataWindow.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ChangeClientDataWindow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ClientOrderManageWindow.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ClientOrderManageWindow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/EditOrderStatusWindow.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/EditOrderStatusWindow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ManageCatalogWindow.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ManageCatalogWindow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ManageUserWindow.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ManageUserWindow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/OrderToWarehouse.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/OrderToWarehouse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/RegisterWindow.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/RegisterWindow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/WarehouseManageWindow.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/WarehouseManageWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AdminWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdminWindow.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AdminWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdminWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ClientWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EmployeeWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/EmployeeWindow.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/EmployeeWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EmployeeWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LoginWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/LoginWindow.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LoginWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LoginWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled.iml" beforeDir="false" afterPath="$PROJECT_DIR$/untitled.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,8 +62,9 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW": "true",
     "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW": "true",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "294",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "296",
     "WebServerToolWindowFactoryState": "false",
     "extract.method.default.visibility": "private",
     "last_opened_file_path": "C:/Users/Kuba/Downloads/mysql-connector-j-8.3.0/mysql-connector-j-8.3.0.jar",
@@ -85,7 +102,9 @@
       <workItem from="1706535685538" duration="8663000" />
       <workItem from="1706563046747" duration="1850000" />
       <workItem from="1706565307852" duration="2773000" />
-      <workItem from="1706718774233" duration="3346000" />
+      <workItem from="1706718774233" duration="4969000" />
+      <workItem from="1706797328908" duration="2013000" />
+      <workItem from="1707066662478" duration="19617000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1706543986247</created>
@@ -101,7 +120,14 @@
       <option name="project" value="LOCAL" />
       <updated>1706567981305</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="initial commit">
+      <created>1706722241546</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1706722241546</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

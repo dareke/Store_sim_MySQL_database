@@ -1,8 +1,13 @@
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class AdminWindow {
     private Database database;
     private JPanel panelMain;
+    private JButton manageCatalogButton;
+    private JButton employeeOptionsButton;
+    private JButton manageUsersButton;
 
     public AdminWindow(Database database) {
         this.database = database;
@@ -12,5 +17,25 @@ public class AdminWindow {
         frame.setSize(800, 450);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
+        manageCatalogButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ManageCatalogWindow manageCatalogWindow = new ManageCatalogWindow(database);
+            }
+        });
+        employeeOptionsButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                EmployeeWindow employeeWindow = new EmployeeWindow(database);
+                frame.dispose();
+            }
+        });
+        manageUsersButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ManageUserWindow manageUserWindow = new ManageUserWindow(database);
+                frame.dispose();
+            }
+        });
     }
 }

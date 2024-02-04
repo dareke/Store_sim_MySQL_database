@@ -20,23 +20,21 @@ public class LoginWindow {
         loginAcceptButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String login = loginTextField.getText();
-                String password = passwordTextField.getText();
                 try {
-                    String type = database.getLogin(login, password);
-                    System.out.println(type);
+                    String type = database.getLogin(loginTextField.getText(), passwordTextField.getText());
                     if(type != null){
                         if(type.equals("admin")){
                             AdminWindow adminWindow = new AdminWindow(database);
                         }
                         else if (type.equals("pracownik")) {
-                            System.out.println("pracownik");
                             EmployeeWindow employeeWindow = new EmployeeWindow(database);
 
                         }
                         else if (type.equals("klient")) {
-                            System.out.println("klient");
                             ClientWindow clientWindow = new ClientWindow(database);
+                        }
+                        else{
+                            return;
                         }
                         frame.dispose();
                     }

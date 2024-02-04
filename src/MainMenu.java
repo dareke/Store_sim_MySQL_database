@@ -32,6 +32,13 @@ public class MainMenu {
                 frame.dispose();
             }
         });
+        registerButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                RegisterWindow registerWindow = new RegisterWindow(database);
+                frame.dispose();
+            }
+        });
     }
 
     public static void main(String[] args) {
