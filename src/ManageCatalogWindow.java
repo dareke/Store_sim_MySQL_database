@@ -11,6 +11,7 @@ public class ManageCatalogWindow {
     private JButton zmieńWidocznośćProduktuButton;
     private JButton odświeżTabelęButton;
     private JButton editProductButton;
+    private JButton cofnijButton;
 
 
     public ManageCatalogWindow(Database database) {
@@ -35,6 +36,39 @@ public class ManageCatalogWindow {
             @Override
             public void actionPerformed(ActionEvent e) {
 
+            }
+        });
+        dodajProduktButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                AddProductWindow addProductWindow = new AddProductWindow(database);
+
+            }
+        });
+        editProductButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                int column = 0;
+                int row = manageCatalogTable.getSelectedRow();
+                int value = (int) manageCatalogTable.getModel().getValueAt(row, column);
+                EditProductDataWindow editProductDataWindow = new EditProductDataWindow(database,value);
+            }
+        });
+        zmieńWidocznośćProduktuButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                int column = 0;
+                int row = manageCatalogTable.getSelectedRow();
+                int value = (int) manageCatalogTable.getModel().getValueAt(row, column);
+                EditAvailabilityWindow editAvailabilityWindow = new EditAvailabilityWindow(database,value);
+
+            }
+        });
+        cofnijButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                AdminWindow adminWindow = new AdminWindow(database);
+                frame.dispose();
             }
         });
     }

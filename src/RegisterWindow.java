@@ -31,14 +31,10 @@ public class RegisterWindow {
             @Override
             public void actionPerformed(ActionEvent e) {
                 // Sprawdzenie czy pola tekstowe nie są puste
-                try {
-                    if(database.checkLogin(loginTextField.getText())==true){
+                    if(database.checkLogin(loginTextField.getText())==true) {
                         JOptionPane.showMessageDialog(null, "login istnieje w bazie", "Błąd", JOptionPane.ERROR_MESSAGE);
                         return; // Przerwij działanie metody
                     }
-                } catch (SQLException ex) {
-                    throw new RuntimeException(ex);
-                }
                 if (loginTextField.getText().isEmpty() || passwordTextField.getText().isEmpty() || nameTextField.getText().isEmpty() ||
                         surnameTextField.getText().isEmpty() || numberTextField.getText().isEmpty() || emailTextField.getText().isEmpty() ||
                         streetTextField.getText().isEmpty() || cityTextField.getText().isEmpty()) {
@@ -87,14 +83,19 @@ public class RegisterWindow {
                 database.registerClient(loginTextField.getText(),passwordTextField.getText(),nameTextField.getText(),
                         surnameTextField.getText(), numberTextField.getText(), emailTextField.getText(),
                         streetTextField.getText(), cityTextField.getText());
-                try {
-                    database.getLogin(loginTextField.getText(), passwordTextField.getText());
-                } catch (SQLException ex) {
-                    throw new RuntimeException(ex);
-                }
-                CatalogWindow catalogWindow = new CatalogWindow(database);
+
+                database.getLogin(loginTextField.getText(), passwordTextField.getText());
+
+                ClientWindow clientWindow = new ClientWindow(database);
                 frame.dispose();
 
+            }
+        });
+        cofnijButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                MainMenu mainMenu = new MainMenu(database);
+                frame.dispose();
             }
         });
     }

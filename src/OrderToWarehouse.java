@@ -16,7 +16,6 @@ public class OrderToWarehouse {
         productTextField.setText("Id produktu: " + chosen_product[0] + " Ilość w magazynie: " + chosen_product[1]);
         JFrame frame = new JFrame("Witaj pracowniku!");
         frame.setContentPane(panelMain);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(800, 450);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
@@ -41,6 +40,13 @@ public class OrderToWarehouse {
                     // Komunikat o błędzie gdy wprowadzony tekst nie jest liczbą
                     JOptionPane.showMessageDialog(null, "Wprowadź poprawną liczbę.", "Błąd", JOptionPane.ERROR_MESSAGE);
                 }
+            }
+        });
+        returnButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                WarehouseManageWindow warehouseManageWindow= new WarehouseManageWindow(database);
+                frame.dispose();
             }
         });
     }

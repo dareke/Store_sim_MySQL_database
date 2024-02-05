@@ -11,6 +11,7 @@ public class ClientOrderManageWindow {
     private JPanel panelMain;
     private JTable clientOrderManageTable;
     private JButton zmieńStatusZamówieniaButton;
+    private JButton cofnijButton;
 
     public ClientOrderManageWindow(Database database) {
         this.database = database;
@@ -37,6 +38,13 @@ public class ClientOrderManageWindow {
                 int row = clientOrderManageTable.getSelectedRow();
                 int value = (int) clientOrderManageTable.getModel().getValueAt(row, column);
                 EditOrderStatusWindow editOrderStatusWindow = new EditOrderStatusWindow(database,value);
+            }
+        });
+        cofnijButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                EmployeeWindow employeeWindow = new EmployeeWindow(database);
+                frame.dispose();
             }
         });
     }

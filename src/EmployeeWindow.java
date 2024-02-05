@@ -8,6 +8,7 @@ public class EmployeeWindow {
     private JButton clientOrderManageButton;
     private JButton warehouseOrderManageButton;
     private JButton warehouseManageButton;
+    private JButton wylogujSięButton;
 
     public EmployeeWindow(Database database) {
         this.database = database;
@@ -35,6 +36,14 @@ public class EmployeeWindow {
             @Override
             public void actionPerformed(ActionEvent e) {
                 WarehouseManageWindow warehouseManageWindow = new WarehouseManageWindow(database);
+                frame.dispose();
+            }
+        });
+        wylogujSięButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                database.logOut();
+                MainMenu mainMenu = new MainMenu(database);
                 frame.dispose();
             }
         });

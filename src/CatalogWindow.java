@@ -8,6 +8,8 @@ public class CatalogWindow {
     private JPanel panelMain;
     private JTable catalogTable;
     private JButton odswiezKatalogButton;
+    private JButton zamówWybranyProduktButton;
+    private JButton cofnijButton;
 
     public CatalogWindow(Database database){
         this.database = database;
@@ -26,6 +28,23 @@ public class CatalogWindow {
             public void actionPerformed(ActionEvent e) {
                 DefaultTableModel model = database.getCatalog();
                 catalogTable.setModel(model);
+            }
+        });
+        zamówWybranyProduktButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                int column = 0;
+                int row = catalogTable.getSelectedRow();
+                int value = (int) catalogTable.getModel().getValueAt(row, column);
+                database.orderToClient(value);
+
+            }
+        });
+        cofnijButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ClientWindow clientWindow = new ClientWindow(database);
+                frame.dispose();
             }
         });
     }

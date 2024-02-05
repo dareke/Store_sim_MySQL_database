@@ -5,33 +5,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dbafc505-25b6-4d7c-8c38-573bfe8b2c05" name="Changes" comment="initial commit">
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ChangeClientDataWindow.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ChangeClientDataWindow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ClientOrderManageWindow.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ClientOrderManageWindow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EditOrderStatusWindow.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EditOrderStatusWindow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ManageCatalogWindow.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ManageCatalogWindow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ManageUserWindow.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ManageUserWindow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/OrderToWarehouse.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/OrderToWarehouse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RegisterWindow.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RegisterWindow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/WarehouseManageWindow.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/WarehouseManageWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AddEmployeeWindow.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AddEmployeeWindow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AddProductWindow.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AddProductWindow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/EditAvailabilityWindow.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/EditAvailabilityWindow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/EditProductDataWindow.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/EditProductDataWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AdminWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdminWindow.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AdminWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdminWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CatalogWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/CatalogWindow.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CatalogWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CatalogWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ChangeClientDataWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/EditClientDataWindow.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ChangeClientDataWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EditClientDataWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ClientOrderManageWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientOrderManageWindow.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ClientOrderManageWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientOrderManageWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ClientOrderWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientOrderWindow.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ClientOrderWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientOrderWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ClientWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientWindow.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ClientWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EditOrderStatusWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/EditOrderStatusWindow.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EditOrderStatusWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EditOrderStatusWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EmployeeWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/EmployeeWindow.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/EmployeeWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EmployeeWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LoginWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/LoginWindow.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LoginWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LoginWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled.iml" beforeDir="false" afterPath="$PROJECT_DIR$/untitled.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ManageCatalogWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/ManageCatalogWindow.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ManageCatalogWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ManageCatalogWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ManageUserWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/ManageUserWindow.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ManageUserWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ManageUserWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OrderToWarehouse.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/OrderToWarehouse.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OrderToWarehouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OrderToWarehouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RegisterWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RegisterWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WarehouseManageWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/WarehouseManageWindow.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WarehouseManageWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WarehouseManageWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WarehouseOrderWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/WarehouseOrderWindow.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WarehouseOrderWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WarehouseOrderWindow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +116,8 @@
       <workItem from="1706565307852" duration="2773000" />
       <workItem from="1706718774233" duration="4969000" />
       <workItem from="1706797328908" duration="2013000" />
-      <workItem from="1707066662478" duration="19617000" />
+      <workItem from="1707066662478" duration="20146000" />
+      <workItem from="1707142799753" duration="12242000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1706543986247</created>
@@ -127,7 +140,14 @@
       <option name="project" value="LOCAL" />
       <updated>1706722241546</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="initial commit">
+      <created>1707087095681</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1707087095681</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

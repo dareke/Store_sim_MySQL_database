@@ -8,6 +8,7 @@ public class AdminWindow {
     private JButton manageCatalogButton;
     private JButton employeeOptionsButton;
     private JButton manageUsersButton;
+    private JButton wylogujSięButton;
 
     public AdminWindow(Database database) {
         this.database = database;
@@ -21,6 +22,7 @@ public class AdminWindow {
             @Override
             public void actionPerformed(ActionEvent e) {
                 ManageCatalogWindow manageCatalogWindow = new ManageCatalogWindow(database);
+                frame.dispose();
             }
         });
         employeeOptionsButton.addActionListener(new ActionListener() {
@@ -34,6 +36,14 @@ public class AdminWindow {
             @Override
             public void actionPerformed(ActionEvent e) {
                 ManageUserWindow manageUserWindow = new ManageUserWindow(database);
+                frame.dispose();
+            }
+        });
+        wylogujSięButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                database.logOut();
+                MainMenu mainMenu = new MainMenu(database);
                 frame.dispose();
             }
         });

@@ -2,27 +2,26 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class EditOrderStatusWindow {
+public class EditAvailabilityWindow {
     private Database database;
-
-    private JComboBox statusComboBox;
-    private JButton cofnijButton;
-    private JButton zmieńStatusButton;
     private JPanel panelMain;
+    private JComboBox choiceComboBox;
+    private JButton button1;
+    private JButton cofnijButton;
 
-    public EditOrderStatusWindow(Database database, int id) {
+    public EditAvailabilityWindow(Database database, int id) {
         this.database = database;
 
         // Definicja opcji dla ComboBox
-        String[] statusString = {"Zrealizowano", "Do realizacji"};
+        String[] statusString = {"Ukryj", "Dostępne"};
 
         // Utworzenie modelu ComboBox na podstawie tablicy opcji
         DefaultComboBoxModel<String> comboBoxModel = new DefaultComboBoxModel<>(statusString);
 
         // Ustawienie modelu ComboBox
-        statusComboBox.setModel(comboBoxModel);
+        choiceComboBox.setModel(comboBoxModel);
 
-        statusComboBox.setSelectedIndex(0);
+        choiceComboBox.setSelectedIndex(0);
 
         JFrame frame = new JFrame("Witaj pracowniku!");
         frame.setContentPane(panelMain);
@@ -30,12 +29,11 @@ public class EditOrderStatusWindow {
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
 
-        zmieńStatusButton.addActionListener(new ActionListener() {
+        button1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println((String) statusComboBox.getSelectedItem());
-                database.changeOrderStatus((String) statusComboBox.getSelectedItem(), id);
-                JOptionPane.showMessageDialog(null, "Status zamówienia został zmieniony!", "Powodzenie!", JOptionPane.INFORMATION_MESSAGE);
+                database.editAvailability(choiceComboBox.getSelectedIndex(), id);
+                JOptionPane.showMessageDialog(null, "Widoczność została zmieniona!", "Powodzenie!", JOptionPane.INFORMATION_MESSAGE);
                 frame.dispose();
             }
         });

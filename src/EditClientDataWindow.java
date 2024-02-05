@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class ChangeClientDataWindow {
+public class EditClientDataWindow {
     private Database database;
     private JTextField emailTextField;
     private JTextField cityTextField;
@@ -12,12 +12,12 @@ public class ChangeClientDataWindow {
     private JTextField nameTextField;
     private JButton button1;
     private JPanel panelMain;
+    private JButton cofnijButton;
 
-    public ChangeClientDataWindow(Database database) {
+    public EditClientDataWindow(Database database) {
         this.database = database;
         JFrame frame = new JFrame("Witamy w Sklepie!");
         frame.setContentPane(panelMain);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(800, 450);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
@@ -79,10 +79,15 @@ public class ChangeClientDataWindow {
                 // Jeśli wszystkie sprawdzenia zakończyły się powodzeniem, zarejestruj klienta
 
                 JOptionPane.showMessageDialog(null, "Dane zostały poprawnie zmienione", "Komunikat", JOptionPane.PLAIN_MESSAGE);
-                database.changeClientData(nameTextField.getText(), surnameTextField.getText(),
+                database.editClientData(nameTextField.getText(), surnameTextField.getText(),
                         numberTextField.getText(), emailTextField.getText(),
                         streetTextField.getText(), cityTextField.getText());
-                ClientWindow clientWindow = new ClientWindow(database);
+                frame.dispose();
+            }
+        });
+        cofnijButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
                 frame.dispose();
             }
         });

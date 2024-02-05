@@ -1,3 +1,5 @@
+import com.sun.tools.javac.Main;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -8,6 +10,7 @@ public class ClientWindow {
     private JButton przejrzyjKatalogButton;
     private JButton przejrzyjZamowieniaButton;
     private JButton zmienDaneButton;
+    private JButton wylogujSięButton;
 
     public ClientWindow(Database database) {
         this.database = database;
@@ -34,7 +37,14 @@ public class ClientWindow {
         zmienDaneButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                ChangeClientDataWindow changeClientDataWindow = new ChangeClientDataWindow(database);
+                EditClientDataWindow editClientDataWindow = new EditClientDataWindow(database);
+            }
+        });
+        wylogujSięButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                database.logOut();
+                MainMenu mainMenu = new MainMenu(database);
                 frame.dispose();
             }
         });

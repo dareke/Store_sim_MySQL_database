@@ -1,13 +1,13 @@
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.sql.SQLException;
 
 public class LoginWindow {
     private JTextField loginTextField;
     private JTextField passwordTextField;
     private JPanel panelMain;
     private JButton loginAcceptButton;
+    private JButton cofnijButton;
     private Database database;
     public LoginWindow(Database database) {
         this.database = database;
@@ -20,7 +20,6 @@ public class LoginWindow {
         loginAcceptButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                try {
                     String type = database.getLogin(loginTextField.getText(), passwordTextField.getText());
                     if(type != null){
                         if(type.equals("admin")){
@@ -39,10 +38,13 @@ public class LoginWindow {
                         frame.dispose();
                     }
 
-                } catch (SQLException ex) {
-                    System.out.println("blad bazy");
-                    throw new RuntimeException(ex);
-                }
+}
+        });
+        cofnijButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                MainMenu mainMenu = new MainMenu(database);
+                frame.dispose();
             }
         });
     }

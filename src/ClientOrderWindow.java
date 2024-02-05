@@ -7,6 +7,7 @@ public class ClientOrderWindow {
     private JPanel panelMain;
     private JButton refreshOrderButton;
     private JTable clientOrderTable;
+    private JButton cofnijButton;
     private Database database;
 
     public ClientOrderWindow(Database database){
@@ -26,6 +27,13 @@ public class ClientOrderWindow {
             public void actionPerformed(ActionEvent e) {
                 DefaultTableModel model = database.getClientOrder();
                 clientOrderTable.setModel(model);
+            }
+        });
+        cofnijButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ClientWindow clientWindow = new ClientWindow(database);
+                frame.dispose();
             }
         });
     }

@@ -9,6 +9,7 @@ public class WarehouseManageWindow {
     private JButton orderProductTable;
     private JButton odświeżButton;
     private JPanel panelMain;
+    private JButton cofnijButton;
 
     public WarehouseManageWindow(Database database) {
         this.database = database;
@@ -36,6 +37,13 @@ public class WarehouseManageWindow {
                     value[i] = warehouseManageTable.getValueAt(row, i).toString();
                 }
                 OrderToWarehouse orderToWarehouse = new OrderToWarehouse(database, value);
+                frame.dispose();
+            }
+        });
+        cofnijButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                EmployeeWindow employeeWindow = new EmployeeWindow(database);
                 frame.dispose();
             }
         });

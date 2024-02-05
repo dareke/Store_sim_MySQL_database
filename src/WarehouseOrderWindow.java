@@ -7,6 +7,7 @@ public class WarehouseOrderWindow {
     private JPanel panelMain;
     private JTable warehouseOrderTable;
     private JButton odswiezZamowieniaButton;
+    private JButton cofnijButton;
     private Database database;
 
     public WarehouseOrderWindow(Database database){
@@ -26,6 +27,13 @@ public class WarehouseOrderWindow {
             public void actionPerformed(ActionEvent e) {
                 DefaultTableModel model = database.getWarehouseOrder();
                 warehouseOrderTable.setModel(model);
+            }
+        });
+        cofnijButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                EmployeeWindow employeeWindow = new EmployeeWindow(database);
+                frame.dispose();
             }
         });
     }
