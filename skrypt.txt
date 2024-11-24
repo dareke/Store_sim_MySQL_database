@@ -1,0 +1,98 @@
+USE sys;
+
+DROP TABLE Dane_klientów;
+DROP TABLE Zamówienia_do_magazynu;
+DROP TABLE Zamówienia_klientów;
+DROP TABLE Magazyn;
+DROP TABLE Użytkownicy;
+DROP TABLE Katalog;
+
+
+CREATE TABLE Dane_klientów (
+ Uzytkownicylogin varchar(50) NOT NULL,
+ imie varchar(25) NOT NULL,
+ nazwisko varchar(50) NOT NULL,
+ numer_telefonu varchar(15) NOT NULL,
+ email varchar(50) NOT NULL,
+ ulica varchar(100) NOT NULL,
+ miasto varchar(100) NOT NULL,
+ PRIMARY KEY (Uzytkownicylogin));
+CREATE TABLE Katalog (
+ id_produktu int(10) auto_increment,
+ nazwa varchar(50) NOT NULL,
+ typ varchar(50) NOT NULL,
+ kolor varchar(50),
+ rozmiar varchar(50),
+ cena float(10),
+ PRIMARY KEY (id_produktu));
+CREATE TABLE Magazyn (
+ Katalogid_produktu int(10) NOT NULL,
+ ilość int(10),
+ widoczność int,
+ PRIMARY KEY (Katalogid_produktu));
+CREATE TABLE Użytkownicy (
+ login varchar(50) NOT NULL,
+ hasło varchar(25) NOT NULL,
+ typ varchar(25) NOT NULL,
+ aktywność int(1) NOT NULL DEFAULT 1,
+ PRIMARY KEY (login));
+CREATE TABLE Zamówienia_do_magazynu (
+ id_zamówienia int(10) auto_increment,
+ MagazynKatalogid_produktu int(10) NOT NULL,
+ Uzytkownicylogin varchar(50),
+ ilość int(10) NOT NULL,
+ data_zamówienia date NOT NULL,
+ PRIMARY KEY (id_zamówienia));
+CREATE TABLE Zamówienia_klientów (
+ id_zamówienia int(10) auto_increment,
+ MagazynKatalogid_produktu int(10) NOT NULL,
+ Uzytkownicylogin varchar(50),
+ data_zamówienia date NOT NULL,
+ status_zamówienia varchar(50) NOT NULL,
+ PRIMARY KEY (id_zamówienia));
+
+INSERT INTO Katalog (nazwa,typ,kolor,rozmiar,cena)
+VALUES ('Czapka','czapka','czarny',NULL,39.99);
+INSERT INTO Katalog (nazwa,typ,kolor,rozmiar,cena)
+VALUES ('Długa koszula','koszula','niebieski','XL',69.99);
+INSERT INTO Katalog (nazwa,typ,kolor,rozmiar,cena)
+VALUES ('Buty','półbut','czarny','45',189.99);
+INSERT INTO Katalog (nazwa,typ,kolor,rozmiar,cena)
+VALUES ('Jeansy','spodnie','jasny-niebieski','M',79.99);
+ INSERT INTO magazyn (katalogid_produktu, ilość, widoczność)
+VALUES (1,5,1);
+ INSERT INTO magazyn (katalogid_produktu, ilość, widoczność)
+VALUES (2,6,1);
+ INSERT INTO magazyn (katalogid_produktu, ilość, widoczność)
+VALUES (3,3,1);
+ INSERT INTO magazyn (katalogid_produktu, ilość, widoczność)
+VALUES (4,2,0);
+INSERT INTO Użytkownicy (login,hasło,typ)
+VALUES ('asdasd','12345678','klient');
+INSERT INTO Użytkownicy (login,hasło,typ)
+VALUES ('klient','klient','klient');
+INSERT INTO Użytkownicy (login,hasło,typ)
+VALUES ('pracownik1','aezakmi','pracownik');
+INSERT INTO Użytkownicy (login,hasło,typ)
+VALUES ('admin','admin','admin');
+INSERT INTO Dane_klientów (Uzytkownicylogin, imie, nazwisko, numer_telefonu, email, ulica, miasto)
+VALUES ('asdasd', 'Ludwik', 'Małolepszy', 48123456789, 'ludi.maly@gmail.com', 'Długa 35/17',
+'Wrocław');
+INSERT INTO zamówienia_klientów (MagazynKatalogid_produktu, Uzytkownicylogin, data_zamówienia, status_zamówienia)
+VALUES (3, 'asdasd', STR_TO_DATE('06-12-23', '%d-%m-%y'), 'Do realizacji');
+INSERT INTO zamówienia_klientów (MagazynKatalogid_produktu, Uzytkownicylogin, data_zamówienia, status_zamówienia)
+VALUES (2, 'klient', STR_TO_DATE('06-12-23', '%d-%m-%y'), 'Zrealizowane');
+INSERT INTO zamówienia_do_magazynu (MagazynKatalogid_produktu, Uzytkownicylogin, ilość, data_zamówienia)
+VALUES (4, 'pracownik1', 5, STR_TO_DATE('06-12-23', '%d-%m-%y'));
+ALTER TABLE Dane_klientów ADD CONSTRAINT FKDane_klien755949 FOREIGN KEY
+(Uzytkownicylogin) REFERENCES Użytkownicy (login);
+ALTER TABLE Zamówienia_klientów ADD CONSTRAINT FKZamówienia974378 FOREIGN KEY
+(MagazynKatalogid_produktu) REFERENCES Magazyn (Katalogid_produktu);
+ALTER TABLE Zamówienia_do_magazynu ADD CONSTRAINT FKZamówienia472355 FOREIGN KEY
+(Uzytkownicylogin) REFERENCES Użytkownicy (login);
+ALTER TABLE Zamówienia_do_magazynu ADD CONSTRAINT FKZamówienia792107 FOREIGN KEY
+(MagazynKatalogid_produktu) REFERENCES Magazyn (Katalogid_produktu);
+ALTER TABLE Magazyn ADD CONSTRAINT FKMagazyn26098 FOREIGN KEY (Katalogid_produktu)
+REFERENCES Katalog (id_produktu);
+ALTER TABLE Zamówienia_klientów ADD CONSTRAINT FKZamówienia654626 FOREIGN KEY
+(Uzytkownicylogin) REFERENCES Użytkownicy (login);
