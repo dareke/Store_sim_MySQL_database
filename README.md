@@ -2,6 +2,7 @@
 ## Description
 Simulation of a Cloth Store, using data stored in database on mySQL server.
 To work, you have to open and provide data about mySQL server to the database.java file.
+Example of working database, stored in a SQL script "skrypt.txt".
 ## Features
 - Register a client account
 - Login into a client, employee, manager to the store
@@ -15,6 +16,7 @@ Jakub Biadalski 2023
 ## Opis
 Symulacja sklepu z ubraniami, używająca danych zapisanych w bazie danych na serwerze mySQL.
 By aplikacja działała poprawnie, należy otworzyć i wprowadzić dane na temat serwera mySQL do pliku database.java.
+Przykład działającej bazy danych, zapisany w pliku "skrypt.txt" ze skryptem SQL do utworzenia bazy. 
 ## Funkcjonalność
 - Rejestracja konta klienta
 - Logowanie do sklepu jako klient, pracownik sklepu, lub administrator sklepu.
